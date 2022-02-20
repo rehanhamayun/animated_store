@@ -200,19 +200,21 @@ class Buttons {
       child: isLoading
           ? const FittedBox(child: CircularProgressIndicator())
           : icon != null
-              ? CupertinoIcons.fromMaterial(
-                  icon: icon,
+              ? Icon(
+                  CupertinoIcons.alarm_fill,
+                  //icon: icon,
                   size: rf(size),
                   color: iconColor,
                   semanticLabel: semanticLabel,
                 )
               : svgPath == null
                   ? Container()
-                  : CupertinoIcons.fromSvg(
-                      iconPath: svgPath,
-                      height: rf(size),
-                      semanticLabel: semanticLabel,
+                  : Icon(
+                      CupertinoIcons.add,
                       color: iconColor,
+                      size: rf(size),
+                      // color: iconColor,
+                      semanticLabel: semanticLabel,
                     ),
     );
   }
